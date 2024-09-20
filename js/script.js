@@ -1,13 +1,11 @@
 /*header-promo*/
 document.addEventListener('DOMContentLoaded', function() {
-    const closeIcon = document.querySelector('.close-icon');
-    const headerPromo = document.querySelector('.header-promo');
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mainNav = document.querySelector('.main-nav');
 
-    closeIcon.addEventListener('click', function() {
-        headerPromo.style.transform = 'translateY(-100%)';
-        setTimeout(() => {
-            headerPromo.style.display = 'none';
-        }, 500); // Время должно совпадать с временем перехода в CSS
+    burgerMenu.addEventListener('click', function() {
+        burgerMenu.classList.toggle('active');
+        mainNav.classList.toggle('active');
     });
 });
 /*header-promo-end*/
