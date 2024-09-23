@@ -93,6 +93,25 @@ a {
     text-decoration: none;
 }
 
+.shop-now-button {
+    font-weight: 500;
+    color: #fff;
+    border-radius: 62px;
+    padding: 16px 54px;
+    width: 210px;
+    height: 52px;
+    background: #000;
+    margin-bottom: 48px;
+    transition: 0.3s ease, transform 0.3s ease;
+}
+
+.shop-now-button:hover {
+    background: #fff; 
+    color: #000;
+    transform: scale(1.05); 
+    box-shadow: 0 8px 8px rgba(0.2, 0.2, 0.2, 0.2); 
+}
+
 body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -399,6 +418,7 @@ body {
 /*MAIN*/
 /*hero*/
 .hero {
+    position: relative;
     min-height: 663px;
     background: #f2f0f1;
     color: #000;
@@ -411,6 +431,7 @@ body {
 .hero__text {
     max-width: 600px;
     margin-top: 103px;
+    z-index: 100;
 
     h1 {
         font-weight: 700;
@@ -427,23 +448,36 @@ body {
     }
 }
 
-.shop-now-button {
-    font-weight: 500;
-    color: #fff;
-    border-radius: 62px;
-    padding: 16px 54px;
-    width: 210px;
-    height: 52px;
-    background: #000;
-    margin-bottom: 48px;
-    transition: 0.3s ease, transform 0.3s ease;
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        width: 74px;
+        height: 2px;
+        transform: rotate(-90deg);
+    }
 }
 
-.shop-now-button:hover {
-    background: #fff; 
+.stat-item {
     color: #000;
-    transform: scale(1.05); 
-    box-shadow: 0 8px 8px rgba(0.2, 0.2, 0.2, 0.2); 
+    h2 {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    
+    p {
+        line-height: 137%;
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.hero__img {
+    position: absolute;
+    bottom: -175px;
+    right: -100px;
 }
 /*hero-end*/
 /*MAIN-END*/
