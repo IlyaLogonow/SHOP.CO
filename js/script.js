@@ -16,4 +16,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 /*header-promo-end*/
 
+/*MAIN*/
+/*shops*/
+document.addEventListener('DOMContentLoaded', function() {
+    const shopsSection = document.querySelector('.shops');
+    const shopsItems = document.querySelectorAll('.shops__item');
+
+    function checkVisibility() {
+        const sectionTop = shopsSection.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop < windowHeight - 50) {
+            shopsItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 400);
+            });
+            window.removeEventListener('scroll', checkVisibility);
+        }
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); 
+});
+/*shops*/
+/*MAIN-END*/
+
  
