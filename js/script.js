@@ -40,6 +40,27 @@ document.addEventListener('DOMContentLoaded', function() {
     checkVisibility(); 
 });
 /*shops*/
+
+/*new-arrivals*/
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.new-arrivals__item');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    items.forEach(item => {
+        observer.observe(item);
+    });
+});
+/*new-arrivals-end*/
 /*MAIN-END*/
 
  
