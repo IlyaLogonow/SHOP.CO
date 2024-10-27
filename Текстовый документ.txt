@@ -1,0 +1,8 @@
+import random
+
+choices = ['камень', 'ножницы', 'бумага']
+user_choice = input("Выберите: камень, ножницы или бумага: ").lower()
+computer_choice = random.choice(choices)
+
+print(f"Вы выбрали: {user_choice}")
+print(f"Компьютер выбрал: {computer_choice}")
